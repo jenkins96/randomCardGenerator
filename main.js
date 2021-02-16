@@ -1,33 +1,54 @@
 window.onload = function() {
   console.log("Hello Rigo from the console!");
-  const number = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  ///////////////// CARD NUMBER SECTION /////////////////
+  const number = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]; // array of poker cards
   const indexNum = Math.floor(Math.random() * number.length);
-  let letter = "";
-  // Switch para evaluar los casos especiales y el default que muestre //el valor number
+  const numPosition = document.getElementById("number");
+  let numAsLetter = ""; // for treating special cases like 11 = "J"
+
+  // Using switch statement for evaluating special cases and setting number[indexNum] as default 
   switch (number[indexNum]) {
     case 11:
-      letter = "J";
-      document.getElementById("number").innerHTML = letter;
-     
+      numAsLetter = "J";
+      numPosition.innerHTML = numAsLetter;
       break;
     case 12:
-      letter = "Q";
-      document.getElementById("number").innerHTML = letter;
+      numAsLetter = "Q";
+      numPosition.innerHTML = numAsLetter;
       break;
     case 13:
-        letter = "K";
-      document.getElementById("number").innerHTML = letter;
+      numAsLetter = "K";
+      numPosition.innerHTML = numAsLetter;
       break;
     case 14:
-      letter = "A";
-      document.getElementById("number").innerHTML = letter;
+      numAsLetter = "A";
+      numPosition.innerHTML = numAsLetter;
       break;
     default:
-        document.getElementById("number").innerHTML = number[indexNum];
+      numPosition.innerHTML = number[indexNum];
       console.log(number[indexNum]);
       break;
   }
-  console.log("letter");
+  
+  ///////////////// CARD ICONS SECTION /////////////////
+  const suit = "♣♦♠♥";
+  const indexSuit = Math.floor(Math.random() * suit.length);
+  const iconTopPosition = document.getElementById("iconTop");
+  const iconBotPosition = document.getElementById("iconBot");
+  let suitInverse = "";
+  //Using if statements
+
+ 
+  if(indexSuit == 0 || indexSuit == 3){
+     iconTopPosition.innerHTML = suit[indexSuit];
+     iconBotPosition.innerHTML = suit[indexSuit];
+  }else if(indexSuit == 1) {
+    iconTopPosition.innerHTML = suit[indexSuit];  
+    iconBotPosition.innerHTML = suit[indexSuit];
+  }else{
+    iconTopPosition.innerHTML = suit[indexSuit];  
+    iconBotPosition.innerHTML = suit[indexSuit];
+  }
   // Iconos
   /*
   const palos = "♣♦♠♥";

@@ -1,33 +1,39 @@
-*{
+/*SELECTORES DE TAGS*/
+body{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: sans-serif;
+    background: green;
+    font-family: 'Great Vibes', cursive; /*From Google Fonts*/
 }
-
+h2{
+    font-size: 4em;
+}
+h1{
+    font-size: 6em;
+}
+/* Class Selectors*/
 .card{
+    
     width: 250px;
-    height: 400px;
-    background: blue;
+    height: 350px;
+    background: white;
     margin: auto;
+    border-radius: 5%;
 }
 .card__top{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start;    
 }
 .card__middle{
-    
   display:flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  border: 3px solid green; 
-  margin-top: 5em;
+  height: 1px;
+  margin-bottom: 3em;
 }
 .card__bot{
-    display:flex;
-    justify-content: flex-end;
-    margin-top: 5em;
-
+    flex-direction: row-reverse;
+     transform: rotate(-180deg);
 }

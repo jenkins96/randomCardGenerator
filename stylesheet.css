@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.card{
+    width: 250px;
+    height: 400px;
+    background: blue;
+    margin: auto;
+}
+.card__top{
+    display: flex;
+    justify-content: flex-start;
+}
+.card__middle{
+    
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border: 3px solid green; 
+  margin-top: 5em;
+}
+.card__bot{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 5em;
+
+}
